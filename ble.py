@@ -1,9 +1,19 @@
+"""
+@Author: Kiran Gurajala & Alex Lee
+@Project: Project Automail
+@Version: 1.0
+"""
+
+# Required imports
 import serial
 import time
 from packet import Packet
 from utilities import *
 from arduino_port import Arduino
+
 class BLE(object):
+
+    # Initializes Arduino object
     def __init__(self, tty_port):
 	self.arduino = Arduino()
 	self.port = self.arduino.getPort()
@@ -12,7 +22,7 @@ class BLE(object):
         self.buffer = []
         self.listeners = []
 
-
+    # Recieves Packet
     def receive_packet(self, timeout=None):
         start_time = time.time()
         self.ser.timeout = None
@@ -29,6 +39,7 @@ class BLE(object):
                     self.notify_event_arduino(packet)
                 return packet
 
+    # Processes byte
     def process_byte(self, x):
         if not self.buffer:
             if x in [0x00, 0x80, 0x08, 0x88]:
@@ -54,6 +65,7 @@ class BLE(object):
 	    else:
 		listener.handle_data(p)
 
+    # Handle Arduino update
     def notify_event_arduino(self, p):
         for listener in self.listeners:
             if listener.__class__.__name__ == 'function':
@@ -61,13 +73,16 @@ class BLE(object):
             else:
                 listener.handle_data_arduino(p, self.arduino)
 
+    # Add listener
     def add_listener(self, listener):
         self.listeners.append(listener)
 
+    # Remove listener
     def remove_listener(self, listener):
         try: self.listeners.remove(listener)
         except ValueError: pass
 
+    # Handle lapses packet
     def wait_event(self, cls, command):
         response = [None]
         def valid_packet(packet):
@@ -78,7 +93,7 @@ class BLE(object):
             self.receive_packet()
         self.remove_listener(valid_packet)
         return response[0]
-
+         
     def connect(self, address):
         return self.send_command(6, 3, pack('6sBHHHH', multichr(address), 0, 6, 6, 64, 0))
 

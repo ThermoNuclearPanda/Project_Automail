@@ -1,6 +1,14 @@
+"""
+@Author: Kiran Gurajala & Alex Lee
+@Project: Project Automail
+@Version: 1.0
+"""
+
+# Required imports
 from utilities import *
 
 class Packet(object):
+
     def __init__(self, ords):
         self.data_type = ords[0]
         self.cls = ords[2]

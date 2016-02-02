@@ -1,5 +1,13 @@
+"""
+@Author: Kiran Gurajala & Alex Lee
+@Project: Project Automail
+@Version: 1.0
+"""
+
+# Required imports
 from enum import Enum
 
+# Enum class
 class PoseType(Enum):
 	REST = 0
 	FIST = 1

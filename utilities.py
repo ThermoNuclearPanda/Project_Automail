@@ -1,4 +1,13 @@
+"""
+@Author: Kiran Gurajala & Alex Lee
+@Project: Project Automail
+@Version: 1.0
+"""
+
+# Required imports
 import struct
+
+# Utils
 
 def pack(fmt, *args):
 	return struct.pack('<' + fmt, *args)
