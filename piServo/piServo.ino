@@ -26,7 +26,7 @@ int clencherSpeed = 2;//degree increment for the clencher Servo.
 int rLED = 7;         //Pin number for Rotator LED
 int cLED = 8;         //Pin number for Clencher LED
 
-//poses and its number assosciated for each one
+//Poses and its number assosciated for each one
 const int REST = 0, FIST = 1, FINGERSPREAD = 4, WAVE_IN = 2, WAVE_OUT = 3, DOUBLE_TAP = 5; 
 const int STOP = 90, RIGHT = 93, LEFT = 87; //numbers to designate movement for a continuous servo
 
