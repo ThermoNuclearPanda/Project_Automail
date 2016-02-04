@@ -18,10 +18,10 @@ Servo clencher;       //clencher will actuate the gripping motion
 
 int refreshRate = 20; //in milliseconds; the time interval for the micro to check for incoming data through serial
 int space = 5;        //this number serves as a standard servo's angle from reaching its maximum actuation
-int input = 0;        //placeholder for the serial input
+int input = 0;        //variable for the serial input
 
-int rPos = 90;        //placeholder for rotator position; 90 represents rest position or neutral position
-int cPos = space;     //placeholder for clencher position; 0 + space is rest position for clench.
+int rPos = 90;        //variable for rotator position; 90 represents rest position or neutral position
+int cPos = space;     //variable for clencher position; 0 + space is rest position for clench.
 int rotatorSpeed = 2;
 int clencherSpeed = 2;//degree increment for the clencher Servo.
 
