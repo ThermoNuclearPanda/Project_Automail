@@ -13,20 +13,20 @@
         4. Add myoConnect.py to run at start up (see below for instructions)
 
 Dependencies:
-    - Python Version 2.6 or greater
-    - pySerial
-    - enum34
+- Python Version 2.6 or greater
+- pySerial
+- enum34
 
-        AutoLogin and script on start up:
-            - http://www.opentechguides.com/how-to/article/raspberry-pi/5/raspberry-pi-auto-start.html
+AutoLogin and script on start up:
+- http://www.opentechguides.com/how-to/article/raspberry-pi/5/raspberry-pi-auto-start.html
 
 ## Arduino Setup
 
     1. Install Arduino IDE (https://www.arduino.cc/en/Main/Software)
     2. Load piServo.uno onto your Arduino through the IDE
 
-    Note:
-        - You must change the Product ID (PID) in arduino_port.py (lines 25-27) to the one specific to your Arduino
+Note:
+- You must change the Product ID (PID) in arduino_port.py (lines 25-27) to the one specific to your Arduino
 ```python
 
 for port in portList:
