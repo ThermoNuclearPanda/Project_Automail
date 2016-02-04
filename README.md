@@ -22,8 +22,8 @@ AutoLogin and script on start up:
 
 ## Arduino Setup
 
-    1. Install Arduino IDE (https://www.arduino.cc/en/Main/Software)
-    2. Load piServo.uno onto your Arduino through the IDE
+1. Install Arduino IDE (https://www.arduino.cc/en/Main/Software)
+2. Load piServo.uno onto your Arduino through the IDE
 
 - You must change the Product ID (PID) in arduino_port.py (lines 25-27) to the one specific to your Arduino
 
