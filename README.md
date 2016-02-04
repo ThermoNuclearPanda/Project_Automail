@@ -27,23 +27,38 @@
 
     Note:
         - You must change the Product ID (PID) in arduino_port.py (lines 25-27) to the one specific to your Arduino
+```python
+
+for port in portList:
+        """ Note: PID is device specific, this is for arduino micro """
+        if "VID:PID=2341:8037" in port[0]\
+        or "VID:PID=2341:8037" in port[1]\
+        or "VID:PID=2341:8037" in port[2]:
+        return port[0]
+
+```
 
 ## Caveats
 
-    - You must have the usb bluetooth adapter plugged in to the pi.
-    - You must calibrate your Myo armband with the Myo Connect software from Thalmic Labs before using Automail.
-    - You must sync the Myo before using it with Automail, it will vibrate for a brief period and then begin to execute
-      your poses.
+- You must have the usb bluetooth adapter plugged in to the pi.
+- You must calibrate your Myo armband with the Myo Connect software from Thalmic Labs before using Automail.
+- You must sync the Myo before using it with Automail, it will vibrate for a brief period and then begin to execute
+  your poses.
 
 ## Support
 
-    - If you have a question about the software or find an error, please open an issue, and I will get to it as I get them.
+- If you have a question about the software or find an error, please open an issue, and I will get to it as I can.
 
 ## To Do
-    - An Arduino library for Myo without the need of a raspberry pi is being worked on
-    - A python package to bundle this together is also on its way
+
+- An Arduino library for Myo without the need of a raspberry pi is being worked on
+- A python package to bundle this together is also on its way
+
+## Forking
+
+- Fork away! please build with and upon Automail!
 
 ## License
 
-    - GNU GPL v3, see LICENSE.
-    - Please remember that no warranty, implied or explicit is included in this software.
+- GNU GPL v3, see LICENSE.
+- Please remember that no warranty, implied or explicit is included in this software.
