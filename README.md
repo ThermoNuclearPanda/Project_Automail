@@ -26,15 +26,14 @@ AutoLogin and script on start up:
     2. Load piServo.uno onto your Arduino through the IDE
 
 - You must change the Product ID (PID) in arduino_port.py (lines 25-27) to the one specific to your Arduino
-```python
 
+```python
 for port in portList:
         """ Note: PID is device specific, this is for arduino micro """
         if "VID:PID=2341:8037" in port[0]\
         or "VID:PID=2341:8037" in port[1]\
         or "VID:PID=2341:8037" in port[2]:
         return port[0]
-
 ```
 
 ## Caveats
@@ -44,10 +43,6 @@ for port in portList:
 - You must sync the Myo before using it with Automail, it will vibrate for a brief period and then begin to execute
   your poses.
 
-## Support
-
-- If you have a question about the software or find an error, please open an issue, and I will get to it as I can.
-
 ## To Do
 
 - An Arduino library for Myo without the need of a raspberry pi is being worked on
@@ -56,6 +51,10 @@ for port in portList:
 ## Forking
 
 - Fork away! Please build with and upon Automail!
+
+## Support
+
+- If you have a question about the software or find an error, please open an issue, and I will get to it as I can.
 
 ## License
 
