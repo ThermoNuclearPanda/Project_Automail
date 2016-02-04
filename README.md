@@ -1,16 +1,16 @@
 # Project Automail
-    Automail is a Python application on raspberry pi that acts a bridge between the Myo armband and an Arduino.
-    It achieves this by translating the electrical signals from the Myo over bluetooth to a number which is
-    then passed on to an Arduino to produce a mechanical motion
+Automail is a Python application on raspberry pi that acts a bridge between the Myo armband and an Arduino.
+It achieves this by translating the electrical signals from the Myo over bluetooth to a number which is
+then passed on to an Arduino to produce a mechanical motion
 
 ## Raspberry Pi Setup
 
-    Automail is meant to work on a raspberry pi with a linux operating system. Steps to set up are below
+Automail is meant to work on a raspberry pi with a linux operating system. Steps to set up are below
 
-        1. Load a raspberry pi with a linux distro (we used raspbian)
-        2. Install dependencies (see below)
-        3. Configure the pi to boot to command line and auto login
-        4. Add myoConnect.py to run at start up (see below for instructions)
+1. Load a raspberry pi with a linux distro (we used raspbian)
+2. Install dependencies (see below)
+3. Configure the pi to boot to command line and auto login
+4. Add myoConnect.py to run at start up (see below for instructions)
 
 Dependencies:
 - Python Version 2.6 or greater
