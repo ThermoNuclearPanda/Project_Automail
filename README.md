@@ -12,10 +12,10 @@
         3. Configure the pi to boot to command line and auto login
         4. Add myoConnect.py to run at start up (see below for instructions)
 
-        Dependencies:
-            - Python Version 2.6 or greater
-            - pySerial
-            - enum34
+Dependencies:
+    - Python Version 2.6 or greater
+    - pySerial
+    - enum34
 
         AutoLogin and script on start up:
             - http://www.opentechguides.com/how-to/article/raspberry-pi/5/raspberry-pi-auto-start.html
