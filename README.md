@@ -25,7 +25,6 @@ AutoLogin and script on start up:
     1. Install Arduino IDE (https://www.arduino.cc/en/Main/Software)
     2. Load piServo.uno onto your Arduino through the IDE
 
-Note:
 - You must change the Product ID (PID) in arduino_port.py (lines 25-27) to the one specific to your Arduino
 ```python
 
@@ -56,7 +55,7 @@ for port in portList:
 
 ## Forking
 
-- Fork away! please build with and upon Automail!
+- Fork away! Please build with and upon Automail!
 
 ## License
 
