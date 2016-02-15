@@ -50,7 +50,8 @@ for port in portList:
 
 ## Forking
 
-- Fork away! Please build with and upon Automail!
+- Fork away! Please build with and upon Automail! We only ask that you please consider releasing your creation back to all
+  of us so we can continue to build together. 
 
 ## Support
 
@@ -58,5 +59,5 @@ for port in portList:
 
 ## License
 
-- GNU GPL v3, see LICENSE.
+- MIT, see LICENSE.
 - Please remember that no warranty, implied or explicit is included in this software.
