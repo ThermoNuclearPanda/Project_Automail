@@ -15,9 +15,9 @@ class BLE(object):
 
     # Initializes Arduino object
     def __init__(self, tty_port):
-	self.arduino = Arduino()
-	self.port = self.arduino.getPort()
-	self.serial = self.arduino.connect(self.port)
+        self.arduino = Arduino()
+        self.port = self.arduino.getPort()
+        self.serial = self.arduino.connect(self.port)
         self.ser = serial.Serial(port=tty_port, baudrate=9600, timeout=3, dsrdtr=1)
         self.buffer = []
         self.listeners = []
@@ -30,8 +30,8 @@ class BLE(object):
             if timeout is not None: self.ser.timeout = start_time + timeout - time.time()
             x = self.ser.read()
             if not x:
-		print("no pose found")
-		return None
+                print("no pose found")
+                return None
 
             packet = self.process_byte(ord(x))
             if packet:
@@ -59,11 +59,11 @@ class BLE(object):
         return None
 
     def notify_event(self, p):
-	for listener in self.listeners:
-	    if listener.__class__.__name__ == 'function':
-		listener(p)
-	    else:
-		listener.handle_data(p)
+        for listener in self.listeners:
+            if listener.__class__.__name__ == 'function':
+                listener(p)
+            else:
+                listener.handle_data(p)
 
     # Handle Arduino update
     def notify_event_arduino(self, p):

@@ -26,7 +26,7 @@ class Myo(object):
         self.find_bluetooth_adapter(tty_port)
         address = self.find_myo_device()
 
-	print("received address from function")
+        print("received address from function")
         # Connects ble to myo
         connection_packet = self.ble.connect(address)
         self.connection = multiord(connection_packet.payload)[-1]
@@ -113,18 +113,18 @@ class Myo(object):
         address = None
         print("before ble startscan")
         self.ble.start_scan()
-	print("after ble startscan")
+        print("after ble startscan")
         while True:
             packet = self.ble.receive_packet()
             print("inside find myo loop")
             if packet.payload.endswith(b'\x06\x42\x48\x12\x4A\x7F\x2C\x48\x47\xB9\xDE\x04\xA9\x01\x00\x06\xD5'):
-	        print("package payload found!")
+            print("package payload found!")
                 address = list(multiord(packet.payload[2:8]))
-		print("address found")
+                print("address found")
                 break
 
         self.ble.end_scan()
-	print("returning address")
+        print("returning address")
         return address
 
     # Write attributes to myo with attributes and value
