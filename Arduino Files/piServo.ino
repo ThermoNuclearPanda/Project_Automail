@@ -12,7 +12,7 @@
 * based on pose input.
 *******************************************/
 
-#include <Servo.h>;
+#include <Servo.h>
 Servo rotator;        //Rotator will actuate the wrist rotation
 Servo clencher;       //clencher will actuate the gripping motion
 
