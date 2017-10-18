@@ -61,3 +61,7 @@ for port in portList:
 
 - MIT, see LICENSE.
 - Please remember that no warranty, implied or explicit is included in this software.
+
+# Info
+
+- Please see this link (https://www.facebook.com/KING5News/videos/10153213695906476/) for a video of Automail in action
